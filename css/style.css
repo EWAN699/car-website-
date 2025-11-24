@@ -1,9 +1,20 @@
 /********** Template CSS **********/
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap');
+
 :root {
     --primary: #D81324;
     --secondary: #0B2154;
     --light: #F2F2F2;
     --dark: #111111;
+}
+
+html {
+    direction: rtl;
+    text-align: right;
+}
+
+body {
+    font-family: 'Assistant', 'Ubuntu', sans-serif;
 }
 
 .fw-medium {
@@ -72,6 +83,12 @@
     border-radius: 2px;
 }
 
+.form-control,
+.form-select,
+textarea {
+    text-align: right;
+}
+
 
 /*** Navbar ***/
 .navbar .dropdown-toggle::after {
@@ -80,11 +97,15 @@
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     vertical-align: middle;
-    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.navbar {
+    direction: rtl;
 }
 
 .navbar-light .navbar-nav .nav-link {
-    margin-right: 30px;
+    margin-left: 30px;
     padding: 25px 0;
     color: #FFFFFF;
     font-size: 15px;
@@ -99,7 +120,7 @@
 
 @media (max-width: 991.98px) {
     .navbar-light .navbar-nav .nav-link  {
-        margin-right: 0;
+        margin-left: 0;
         padding: 10px 0;
     }
 
@@ -111,6 +132,18 @@
 .navbar-light .navbar-brand,
 .navbar-light a.btn {
     height: 75px;
+}
+
+.navbar-light .navbar-nav {
+    margin: 0;
+}
+
+.navbar .navbar-nav {
+    text-align: right;
+}
+
+.navbar .dropdown-menu {
+    text-align: right;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -151,6 +184,7 @@
     bottom: 0;
     background: rgba(0, 0, 0, .7);
     z-index: 1;
+    text-align: right;
 }
 
 .carousel-control-prev,
@@ -162,6 +196,7 @@
 .carousel-control-next-icon {
     width: 3rem;
     height: 3rem;
+    transform: scaleX(-1);
 }
 
 @media (max-width: 768px) {
